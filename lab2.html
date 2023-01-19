@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<HTML>
+	<HEAD>
+		<TITLE> Лабораторна робота№2 ІТех Ісамутдінов Даніїл </TITLE>
+		<style>
+			.червоний {
+				background: red;
+			}
+			#чорний {
+				background: black;
+				color: red;
+			}
+			.box {
+				display: inline-block;
+				width: 400px;
+				height: 100px;
+				background-color: #F5F5DC;
+			}
+			#div_static {
+				position: static;
+				top: 40px; left: 40px;
+			}
+			#div_relative {
+				position: relative;
+				top: 40px; left: 40px;
+				background-color: #F5F5DCAA;
+			}
+			}
+			#div_fixed {
+				position: fixed;
+				top: 40px; left: 40px;
+			}
+			#div_sticky {
+				position: sticky;
+				bottom: 0px; left: 0px;
+			}
+			.зліва {
+				float: left;
+			}
+			.справа {
+				float: right;
+			}
+			.div_container{
+				display: flex;
+				flex-wrap: wrap;
+				border:1px solid black;
+				width: 400px;
+			}
+			.box2 {
+				display: flex;
+				width: 100px;
+				height: 100px;
+				background-color: #006;
+				color: white;
+				margin: 10px;
+			}
+		</style>
+		<link rel="stylesheet" href="style.css">
+	</HEAD>
+	<BODY>
+		<h1>Лабораторна робота№2 ІТех<br>
+			Ісамутдінов Даніїл
+		</h1>
+		<span>
+			Приклад зміни стилю різними способами:
+		</span>
+		<ul>
+			<li>
+				<h2> Згрупована стилізація через селектор тегів із стильової таблиці підключеної зі зовнішнього CSS-файлу<br>(Стиль береться з: style.css: h2,h3,h4,h5,h6 { ... })
+				</h2>
+			</li>
+			<li>
+				<h3> Тут вже одиночна стилізація через селектор тегу у контейнері &lt;style&gt;<br>(Стиль береться з: &lt;style&gt; h3 { ... } &lt;/style&gt;)
+				</h3>
+			</li>
+			<li>
+				<h4 style="background: yellow; color: blue"> Це стилізація через inline-опис стилю<br>(Стиль береться з: &lt;h4 style=" ... "&gt;)
+				</h4>
+			</li>
+			<li>
+				<h5 class="червоний"> Це стилізація через селектор класу<br>(Стиль береться з: &lt;style&gt; .червоний { ... } &lt;/style&gt;)
+				</h5>
+			</li>
+			<li>
+				<h6 id="чорний"> Це стилізація через селектор ідентифікатор<br>(Стиль береться з: &lt;style&gt; #чорний { ... } &lt;/style&gt;)
+				</h6>
+			</li>
+		</ul>
+		<span>
+			Види позиціонування блочних елементів за рахунок властивості <b>position</b>:
+		</span>
+		<div><br>static - елемент розташовується відповідно до звичайного потоку документа та не підвладний діям зсуву.</div>
+		<div class="box" id="div_static">
+			static - "зміщений" на 40 пікселей вниз-вправо
+		</div>
+		<div><br>relative - елемент розташовується відповідно до звичайного потоку документа, а потім зміщується відносно самого себе.</div>
+		<div class="box" id="div_relative">
+			relative - зміщений на 40 пікселей вниз-вправо
+		</div>
+		<div><br>fixed - Елемент видаляється з звичайного потоку документу, і для нього не створюється місця в макеті сторінки. Він розташовується відносно початкового блоку-предка, створеного вікном перегляду.</div>
+		<div class="box" id="div_fixed">
+			fixed - "зміщений" на 40 пікселей вниз-вправо
+		</div>
+		<div><br>sticky - елемент розташовується відповідно до звичайного потоку документа, а потім зміщується відносно його найближчого прокручуваного предка та блоку-предка.</div>
+		<div class="box" id="div_sticky">
+		sticky - розташований у звичайному потоку документа та приклеєнийний до нижнього-лівого кута
+		</div>
+		<span>
+			<br>Приклад використання властивості <b>flow</b>:
+		</span>
+		<div>
+			<img src="left_side.png" alt="зображення зліва" width="100" class="зліва">
+			<img src="right_side.gif" alt="зображення справа" width="100" class="справа">
+			Властивість <b>flow CSS</b> - розміщує елемент зліва чи справа від контейнера, дозволяючи тексту та вбудованим елементам обтікати його. Елемент видаляється зі звичайного потоку сторінки, але все ще залишається частиною потоку (на відміну від абсолютного позиціонування).
+		</div>
+		<span>
+			<br><br><br>Приклад використання <b>flexbox</b>:
+		</span>
+		<div class="div_container">
+			<div class="box2">box 1</div><div class="box2" style="height:200px">box 2</div><div class="box2">box 3</div>
+			<div class="box2">box 4</div><div class="box2" >box 5</div><div class="box2">box 6</div>
+		</div>
+	</BODY>
+</HTML>
